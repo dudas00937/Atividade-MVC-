@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Autor - Biblioteca</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<nav th:replace="~{fragments/menu :: menu}"></nav>
+
+<main>
+    <h1 th:text="${autor.id == null} ? 'Cadastrar Autor' : 'Editar Autor'"></h1>
+
+    <form class="formulario" th:action="@{/autores/salvar}" th:object="${autor}" method="post">
+        <input type="hidden" th:field="*{id}">
+
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" th:field="*{nome}" required>
+
+        <label for="nacionalidade">Nacionalidade</label>
+        <input type="text" id="nacionalidade" th:field="*{nacionalidade}" required>
+
+        <label for="obrasPublicadas">Obras publicadas</label>
+        <input type="text" id="obrasPublicadas" th:field="*{obrasPublicadas}" required>
+
+        <div class="botoes">
+            <button type="submit" class="botao">Salvar</button>
+            <a class="botao secundario" th:href="@{/autores}">Cancelar</a>
+        </div>
+    </form>
+</main>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Empréstimo - Biblioteca</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<nav th:replace="~{fragments/menu :: menu}"></nav>
+
+<main>
+    <h1 th:text="${emprestimo.id == null} ? 'Cadastrar Empréstimo' : 'Editar Empréstimo'"></h1>
+
+    <form class="formulario" th:action="@{/emprestimos/salvar}" th:object="${emprestimo}" method="post">
+        <input type="hidden" th:field="*{id}">
+
+        <label for="livro">Livro</label>
+        <input type="text" id="livro" th:field="*{livro}" required>
+
+        <label for="usuario">Usuário</label>
+        <input type="text" id="usuario" th:field="*{usuario}" required>
+
+        <label for="dataRetirada">Data de retirada</label>
+        <input type="date" id="dataRetirada" th:field="*{dataRetirada}" required>
+
+        <label for="dataDevolucao">Data de devolução</label>
+        <input type="date" id="dataDevolucao" th:field="*{dataDevolucao}" required>
+
+        <div class="botoes">
+            <button type="submit" class="botao">Salvar</button>
+            <a class="botao secundario" th:href="@{/emprestimos}">Cancelar</a>
+        </div>
+    </form>
+</main>
+</body>
+</html>

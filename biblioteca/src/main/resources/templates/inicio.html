@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Biblioteca</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<nav th:replace="~{fragments/menu :: menu}"></nav>
+
+<main>
+  <h1 th:text="'Sistema de Biblioteca'"></h1>
+  <p>Escolha o que deseja gerenciar:</p>
+
+  <div class="cards">
+    <a class="card" th:href="@{/livros}">Livros</a>
+    <a class="card" th:href="@{/autores}">Autores</a>
+    <a class="card" th:href="@{/categorias}">Categorias</a>
+    <a class="card" th:href="@{/usuarios}">Usuários</a>
+    <a class="card" th:href="@{/emprestimos}">Empréstimos</a>
+  </div>
+</main>
+</body>
+</html>

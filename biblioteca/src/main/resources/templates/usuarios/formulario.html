@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Livro - Biblioteca</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<nav th:replace="~{fragments/menu :: menu}"></nav>
+
+<main>
+    <h1 th:text="${livro.id == null} ? 'Cadastrar Livro' : 'Editar Livro'"></h1>
+
+    <form class="formulario" th:action="@{/livros/salvar}" th:object="${livro}" method="post">
+        <input type="hidden" th:field="*{id}">
+
+        <label for="titulo">Título</label>
+        <input type="text" id="titulo" th:field="*{titulo}" required>
+
+        <label for="autor">Autor</label>
+        <input type="text" id="autor" th:field="*{autor}" required>
+
+        <label for="isbn">ISBN</label>
+        <input type="text" id="isbn" th:field="*{isbn}" required>
+
+        <div class="botoes">
+            <button type="submit" class="botao">Salvar</button>
+            <a class="botao secundario" th:href="@{/livros}">Cancelar</a>
+        </div>
+    </form>
+</main>
+</body>
+</html>
