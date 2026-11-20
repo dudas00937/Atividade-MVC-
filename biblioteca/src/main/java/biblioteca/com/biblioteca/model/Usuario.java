@@ -1,40 +1,24 @@
-package main.model;
+ppackage biblioteca.com.biblioteca.model;
 
 public class Usuario {
+    private Long id;
     private String nome;
-    private double id;
-    private double idade;
+    private int idade;
     private String cidade;
 
-    public String getNome() {
-        return nome;
-    }
+    public Long getId() { return id; }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    public void setId(Long id) { this.id = id; }
 
-    public double getId() {
-        return id;
-    }
+    public String getNome() { return nome; }
 
-    public void setId(double id) {
-        this.id = id;
-    }
+    public void setNome(String nome) { this.nome = nome; }
 
-    public double getIdade() {
-        return idade;
-    }
+    public int getIdade() { return idade; }
 
-    public void setIdade(double idade) {
-        this.idade = idade;
-    }
+    public void setIdade(int idade) { this.idade = idade; }
 
-    public String getCidade() {
-        return cidade;
-    }
+    public String getCidade() { return cidade; }
 
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
-    }
+    public void setCidade(String cidade) { this.cidade = cidade; }
 }

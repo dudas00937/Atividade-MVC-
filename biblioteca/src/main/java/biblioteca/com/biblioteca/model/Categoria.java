@@ -1,13 +1,14 @@
-package main.model;
+package biblioteca.com.biblioteca.model;
 
 public class Categoria {
+    private Long id;
     private String genero;
 
-    public String getGenero() {
-        return genero;
-    }
+    public Long getId() { return id; }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
+    public void setId(Long id) { this.id = id; }
+
+    public String getGenero() { return genero; }
+
+    public void setGenero(String genero) { this.genero = genero; }
 }

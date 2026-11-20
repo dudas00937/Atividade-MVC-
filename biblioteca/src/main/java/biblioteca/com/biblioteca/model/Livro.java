@@ -1,29 +1,26 @@
-package main.model;
+package biblioteca.com.biblioteca.model;
 
 public class Livro {
+    private Long id;
     private String titulo;
     private String autor;
     private String isbn;
 
-    public String getTitulo() {
-        return titulo;
-    }
+    public Long getId() { return id; }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
+    public void setId(Long id) { this.id = id; }
 
-    public String getAutor() {
-        return autor;
-    }
+    public String getTitulo() { return titulo; }
 
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
+    public void setTitulo(String titulo) { this.titulo = titulo; }
 
-    public String getIsbn() {
-        return isbn;
-    }
+    public String getAutor() { return autor; }
+
+    public void setAutor(String autor) { this.autor = autor; }
+
+    public String getIsbn() { return isbn; }
+
+    public void setIsbn(String isbn) { this.isbn = isbn; }
 
 
 }

@@ -1,22 +1,31 @@
-package main.model;
+package biblioteca.com.biblioteca.model;
 
-public class Empréstimo {
-    private double data_retirada;
-    private double data_devolucao;
+import java.time.LocalDate;
 
-    public double getData_retirada() {
-        return data_retirada;
-    }
+public class Emprestimo {
+    private Long id;
+    private String livro;
+    private String usuario;
+    private LocalDate dataRetirada;
+    private LocalDate dataDevolucao;
 
-    public void setData_retirada(double data_retirada) {
-        this.data_retirada = data_retirada;
-    }
+    public Long getId() { return id; }
 
-    public double getData_devolucao() {
-        return data_devolucao;
-    }
+    public void setId(Long id) { this.id = id; }
 
-    public void setData_devolucao(double data_devolucao) {
-        this.data_devolucao = data_devolucao;
-    }
+    public String getLivro() { return livro; }
+
+    public void setLivro(String livro) { this.livro = livro; }
+
+    public String getUsuario() { return usuario; }
+
+    public void setUsuario(String usuario) { this.usuario = usuario; }
+
+    public LocalDate getDataRetirada() { return dataRetirada; }
+
+    public void setDataRetirada(LocalDate dataRetirada) { this.dataRetirada = dataRetirada; }
+
+    public LocalDate getDataDevolucao() { return dataDevolucao; }
+
+    public void setDataDevolucao(LocalDate dataDevolucao) { this.dataDevolucao = dataDevolucao; }
 }

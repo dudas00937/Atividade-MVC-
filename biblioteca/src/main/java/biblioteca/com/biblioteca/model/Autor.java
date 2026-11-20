@@ -1,31 +1,24 @@
-package main.model;
+package biblioteca.com.biblioteca.model;
 
 public class Autor {
+    private Long id;
     private String nome;
     private String nacionalidade;
-    private String obraspublicadas;
+    private String obrasPublicadas;
 
-    public String getNome() {
-        return nome;
-    }
+    public Long getId() { return id; }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    public void setId(Long id) { this.id = id; }
 
-    public String getNacionalidade() {
-        return nacionalidade;
-    }
+    public String getNome() { return nome; }
 
-    public void setNacionalidade(String nacionalidade) {
-        this.nacionalidade = nacionalidade;
-    }
+    public void setNome(String nome) { this.nome = nome; }
 
-    public String getObraspublicadas() {
-        return obraspublicadas;
-    }
+    public String getNacionalidade() { return nacionalidade; }
 
-    public void setObraspublicadas(String obraspublicadas) {
-        this.obraspublicadas = obraspublicadas;
-    }
+    public void setNacionalidade(String nacionalidade) { this.nacionalidade = nacionalidade; }
+
+    public String getObrasPublicadas() { return obrasPublicadas; }
+
+    public void setObrasPublicadas(String obrasPublicadas) { this.obrasPublicadas = obrasPublicadas; }
 }
